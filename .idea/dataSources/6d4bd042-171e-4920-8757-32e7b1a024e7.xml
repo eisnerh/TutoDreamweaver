@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="id2485344_dreamweaver@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="id2485344_dreamweaver">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cursophp"/>
+    <schema id="4" parent="1" name="employees"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="my_crud"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="phpmyadmin"/>
+    <schema id="10" parent="1" name="sys"/>
+    <table id="11" parent="2" name="productos"/>
+    <column id="12" parent="11" name="clave">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="13" parent="11" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="11" name="descripcion">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="11" name="precio">
+      <Position>4</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="11" name="cantidad">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="11" name="imagen">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="18" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>clave</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
