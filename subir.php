@@ -49,23 +49,23 @@ try {
 		// On this example, obtain safe unique name from its binary data.
 		/** @var TYPE_NAME $_FILES */
 		if ( ! move_uploaded_file(
-			$_FILES['archivo']['tmp_name'],
-			sprintf( '%s.%s',
-				sha1_file( $_FILES['archivo']['tmp_name'] ),
-				$ext
-			)
+			$_FILES['archivo']['tmp_name'], "archivos/" .
+			                                sprintf( '%s.%s',
+				                                sha1_file( $_FILES['archivo']['tmp_name'] ),
+				                                $ext
+			                                )
 		) ) {
 			throw new RuntimeException( 'Failed to move uploaded file.' );
 		}
 
-		$para      = 'eisner.lopez@gmail.com';
-		$titulo  = 'archivo subido';
-		$mensaje = 'Archivo subido. <br />' . "Nombre: " . $_FILES['archivo']['name'] . "<br />Pesa: " . $_FILES['archivo']['size'];
+		$para     = 'eisner.lopez@gmail.com';
+		$titulo   = 'archivo subido';
+		$mensaje  = 'Archivo subido. <br />' . "Nombre: " . $_FILES['archivo']['name'] . "<br />Pesa: " . $_FILES['archivo']['size'];
 		$cabecera = 'From: webmaster@example.com' . "\r\n" .
 		            'Reply-To: webmaster@example.com' . "\r\n" .
 		            'X-Mailer: PHP/' . phpversion();
 
-		mail($para, $titulo, $mensaje, $cabecera);
+		mail( $para, $titulo, $mensaje, $cabecera );
 
 		echo 'File is uploaded successfully.';
 	}
